@@ -18,6 +18,9 @@ opcao_complemento(14).
 opcao_complemento(15).
 opcao_complemento(16).
 opcao_complemento(17).
+opcao_bebida(18).
+opcao_bebida(19).
+opcao_bebida(20).
 % Listagem
 consulta([lista, massa|_],
 '
@@ -44,6 +47,13 @@ consulta([lista, complemento|_],
 15 - Azeitona
 16 - Brocolis
 17 - Nenhum').
+
+consulta([lista, bebida|_],
+'
+18 - Refrigerante
+19 - Suco
+20 - Agua').
+
 % Consulta das respostas
 consulta( [1|_],
 'Tradicional').
@@ -79,3 +89,9 @@ consulta( [16|_],
 'Brocolis').
 consulta( [17|_],
 'Nenhum').
+consulta( [18|_],
+'Refrigerante').
+consulta( [19|_],
+'Suco').
+consulta( [20|_],
+'Agua').
