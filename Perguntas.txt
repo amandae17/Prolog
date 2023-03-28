@@ -1,0 +1,7 @@
+? - pizzaria.
+? - 'nome'.
+? - 000000.
+? - 'Rua X, 453'.
+? - Escolher número
+
+Obs: Sempre finalizar com ponto.
