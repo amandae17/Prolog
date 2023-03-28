@@ -5,22 +5,33 @@ opcao_massa(1).
 opcao_massa(2).
 opcao_massa(3).
 opcao_massa(4).
-opcao_recheio(5).
-opcao_recheio(6).
-opcao_recheio(7).
-opcao_queijo(8).
-opcao_queijo(9).
-opcao_queijo(10).
+
+opcao_molho(5).
+opcao_molho(6).
+opcao_molho(7).
+
+opcao_recheio(8).
+opcao_recheio(9).
+opcao_recheio(10).
+
 opcao_queijo(11).
-opcao_complemento(12).
-opcao_complemento(13).
-opcao_complemento(14).
+opcao_queijo(12).
+opcao_queijo(13).
+opcao_queijo(14).
+
 opcao_complemento(15).
 opcao_complemento(16).
 opcao_complemento(17).
-opcao_bebida(18).
-opcao_bebida(19).
-opcao_bebida(20).
+opcao_complemento(18).
+opcao_complemento(19).
+opcao_complemento(20).
+
+opcao_borda(21).
+opcao_borda(22).
+
+opcao_bebida(23).
+opcao_bebida(24).
+opcao_bebida(25).
 % Listagem
 consulta([lista, massa|_],
 '
@@ -28,31 +39,43 @@ consulta([lista, massa|_],
 2 - Integral
 3 - Especial
 4 - Fermantecao Natural').
+
+consulta([lista, molho|_],
+'
+5 - Tradicional
+6 - Da Casa
+7 - Especial').
+
 consulta([lista, recheio|_],
 '
-5 - Surpresa
-6 - Moda Casa
-7 - Vegetariana').
+8 - Surpresa
+9 - Moda Casa
+10 - Vegetariana').
 consulta([lista, queijo|_],
 '
-8 - Mussarela
-9 - Cheddar
-10 - Parmesao
-11 - Brie').
+11 - Mussarela
+12 - Cheddar
+13 - Parmesao
+14 - Brie').
 consulta([lista, complemento|_],
 '
-12 - Oregano
-13 - Tomate
-14 - Cebola
-15 - Azeitona
-16 - Brocolis
-17 - Nenhum').
+15 - Oregano
+16 - Tomate
+17 - Cebola
+18 - Azeitona
+19 - Brocolis
+20 - Nenhum').
+
+consulta([lista, borda|_],
+'
+21 - Sim
+22 - Nao').
 
 consulta([lista, bebida|_],
 '
-18 - Refrigerante
-19 - Suco
-20 - Agua').
+23 - Refrigerante
+24 - Suco
+25 - Agua').
 
 % Consulta das respostas
 consulta( [1|_],
@@ -64,34 +87,44 @@ consulta( [3|_],
 consulta( [4|_],
 'Fermantecao Natural').
 consulta( [5|_],
-'Surpresa').
+'Tradicional').
 consulta( [6|_],
-'Moda Casa').
+'Da Casa').
 consulta( [7|_],
-'Vegetariana').
+'Especial').
 consulta( [8|_],
-'Mussarela').
+'Surpresa').
 consulta( [9|_],
-'Cheddar').
+'Moda Casa').
 consulta( [10|_],
-'Parmesao').
+'Vegetariana').
 consulta( [11|_],
-'Brie').
+'Mussarela').
 consulta( [12|_],
-'Oregano').
+'Cheddar').
 consulta( [13|_],
-'Tomate').
+'Parmesao').
 consulta( [14|_],
-'Cebola').
+'Brie').
 consulta( [15|_],
-'Azeitona').
+'Oregano').
 consulta( [16|_],
-'Brocolis').
+'Tomate').
 consulta( [17|_],
-'Nenhum').
+'Cebola').
 consulta( [18|_],
-'Refrigerante').
+'Azeitona').
 consulta( [19|_],
-'Suco').
+'Brocolis').
 consulta( [20|_],
+'Nenhum').
+consulta( [21|_],
+'Sim').
+consulta( [22|_],
+'Não').
+consulta( [23|_],
+'Refrigerante').
+consulta( [24|_],
+'Suco').
+consulta( [25|_],
 'Agua').
