@@ -4,10 +4,8 @@ pizzaria:-
 nl, format('Bem vindo a PizzaVirtual'), nl,
 format('Para comecar digite seu nome: '),
 read(Nome), nl,
-format('Bem vindo '), format(Nome), format(',
-favor inserir seu cpf: '),
-read(Cpf), nl, format(',
-favor inserir endereco: '),
+format('Bem vindo '), format(Nome), format(', favor inserir seu cpf: '),
+read(Cpf), nl, format('Favor inserir endereco: '),
 read(Endereco), nl,
 nl, format('------MONTE SUA PIZZA------'),
 nl,
@@ -37,13 +35,14 @@ consulta([lista, complemento|_], A4),
 format(A4),
 nl, read(Complemento),
 opcao_complemento(Complemento),
+repeat,
 nl, format('Selecione uma bebida:'),
 nl,
-consulta([lista, bebida|_], A2),
-format(A2),
+consulta([lista, bebida|_], A5),
+format(A5),
 nl, read(Bebida),
 opcao_bebida(Bebida),
-pizza1(Massa, Recheio, Queijo, Complemento, Bebida),
+pizza(Massa, Recheio, Queijo, Complemento, Bebida),
 nl, nl, format('Pedido finalizado!'),
 encerra_sessao('sim', Nome).
 consulta_base_dados(Entrada, Resposta) :-
@@ -51,7 +50,7 @@ consulta(Entrada, Resposta), !.
 encerra_sessao('sim', Nome):-
 nl, nl, format('Obrigado, '), format(Nome),
 format(' Dentro do prazo de 1 hora seu pedido estara chegando!!!'), nl, nl, !.
-pizza1(Massa, Recheio, Queijo, Complemento, Bebida), :-
+pizza(Massa, Recheio, Queijo, Complemento, Bebida), :-
 consulta([Massa|_], Mtxt),
 consulta([Recheio|_], Rtxt),
 consulta([Queijo|_], Qtxt),
