@@ -69,4 +69,4 @@ consulta_base_dados(Entrada, Resposta) :-
 consulta(Entrada, Resposta), !.
 encerra_sessao('sim', Nome):-
 nl, nl, format('Obrigado, '), format(Nome),
-format(' dentro do prazo de 1 hora seu pedido estara chegando!!! PizzaVirtual agradece sua preferencia!!'), nl, nl, !.
+format(' dentro do prazo de 1 hora seu pedido estara chegando!!! PizzaVirtual agradece a preferencia!!'), nl, nl, !.
